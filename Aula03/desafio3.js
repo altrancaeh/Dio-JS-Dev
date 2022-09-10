@@ -1,5 +1,5 @@
 /*
-1) Faça um algorítimo que dado as 3 notasa tiradas por um aluno em um semestra da faculdade e imprima a sua média e sua classificação conforme a tabela abaixo.
+1) Faça um algorítimo que dado as 3 notas tiradas por um aluno em um semestra da faculdade e imprima a sua média e sua classificação conforme a tabela abaixo.
 
 Média = (nota 1 + nota 2 + nota 3) / 3;
 
