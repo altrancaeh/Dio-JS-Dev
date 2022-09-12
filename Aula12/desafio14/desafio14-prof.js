@@ -19,23 +19,26 @@ Para calcular o percentual dos impostos, siga as alíquotas:
 
 const { gets, print } = require('./funcoes-auxiliares')
 
-let salarioBruto = gets(0)
-let benefícios = gets(1)
+let salarioBruto = gets()
+let beneficios = gets()
 
 
-function calcularSalario() {
-    if (salarioBruto <= 1100) {
-        salarioBruto = (salarioBruto - (salarioBruto * 0.05))
-        return salarioBruto + benefícios
-    } else if(salarioBruto > 1100.01 || salarioBruto <= 2500) {
-        salarioBruto = (salarioBruto - (salarioBruto * 0.1))
-        return salarioBruto + benefícios
+function calcularAliquota(valor, percentual) {
+   return valor * (percentual/100)
+}
+
+function pegarAliquotaComBaseNoSalario(salario) {
+    if (salario >= 0 && salario <= 1100) {
+        return 5
+    } else if (salario >= 1100.01 && salario <= 2500) {
+        return 10
     } else {
-        salarioBruto = (salarioBruto - (salarioBruto * 0.15))
-        return salarioBruto + benefícios
+        return 15
     }
 }
 
-print(`O salário é ${calcularSalario()}`)
+let aliquotaSalario = pegarAliquotaComBaseNoSalario(salarioBruto)
+let valorImposto = calcularAliquota(salarioBruto, aliquotaSalario)
+let salarioLiquido = salarioBruto - valorImposto + beneficios
 
-
+print(salarioLiquido)
