@@ -19,7 +19,8 @@ for (let i = 0; i < n; i++) {
     if (numero % 2 === 0) {
         if (numero > maiorValorPar) {
             maiorValorPar = numero
-        } } else {
+        } 
+    } else {
             if (menorValorImpar === 0) {
                 menorValorImpar = numero
             } else if (numero < menorValorImpar) {

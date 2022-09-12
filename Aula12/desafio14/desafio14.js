@@ -36,6 +36,6 @@ function calcularSalario() {
     }
 }
 
-print(`O salário é ${calcularSalario()}`)
+print(`O salário é ${(calcularSalario().toFixed(2))}`)
 
 
