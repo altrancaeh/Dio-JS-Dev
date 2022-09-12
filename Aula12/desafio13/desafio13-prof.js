@@ -9,25 +9,23 @@ Saídas: Maior número par: 10 / Menor número ímpar: 1
 
 const { gets, print } = require('./funcoes-auxiliares')
 
-let maiorValorPar = 0
-let menorValorImpar = 0
+let maiorValorPar = null
+let menorValorImpar = null
 const n = gets()
 
-for (let i = 0; i < n; i++) {
+for (let i = 0; i <= n; i++) {
     const numero = gets()
 
     if (numero % 2 === 0) {
-        if (numero > maiorValorPar) {
+        if (maiorValorPar === null || numero > maiorValorPar) {
             maiorValorPar = numero
-        } } else {
-            if (menorValorImpar === 0) {
-                menorValorImpar = numero
-            } else if (numero < menorValorImpar) {
+        }
+     } else {
+            if (menorValorImpar === null || numero < menorValorImpar) {
                 menorValorImpar = numero
             }
         }
-    }
-
+        }
 
 print(`Maior valor par: ${maiorValorPar}`)
 print(`Menor valor ímpar: ${menorValorImpar}`)
