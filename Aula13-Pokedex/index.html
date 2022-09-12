@@ -1,0 +1,56 @@
+<!---
+    Comentou sobre a importância de adicionar um normalize css no documento para 
+    assegurar a otimização entre os navegadores.
+    1 - Organizar as pastas de CSS e Style
+    2 - Aplicar normalize para otimização em navegadores
+    3 - Definir o grupo de fontes da página no fonts.google.com
+    4 - Organizar cada linha de código para mostrar onde está cada coisa através de comentários
+-->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+    
+    <!--Normalize CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" 
+    integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--Font Roboto-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
+
+    <!--Nosso CSS-->
+    <link rel="stylesheet" href="/Aula13-Pokedex/assets/css/global.css">
+    <link rel="stylesheet" href="/Aula13-Pokedex/assets/css/pokedex.css">
+
+</head>
+<body>
+    <h1>Pokedex</h1>
+
+<section class="content">
+    <ol class="pokemons">
+        <li class="pokemon">
+            <span class="number">#001</span>
+            <span class="name">Bulbasaur</span>
+            <div class="detail">
+                <ol class="types">
+                    <li class="type">Grass</li>
+                    <li class="type">Poison</li>
+                </ol>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg" alt="Bulbasaur">
+            </div>
+        </li>
+
+        </li>
+        </ol>
+</section>
+
+<!--Nosso Script-->
+<script src="/Aula13-Pokedex/assets/js/main.js"></script>
+</body>
+</html>
