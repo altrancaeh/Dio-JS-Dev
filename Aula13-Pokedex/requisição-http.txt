@@ -1,0 +1,62 @@
+Para montar uma requisição HTTP:
+URL: https://pokeapi.co/api/v2/pokemon
+Do que a URL é composta: ${ip}/${path = camimho de identificação do recurso}
+IP = https://pokeapi.co
+path = /api/v2/pokemon
+
+Request Method/Tipo de solicitação: GET, POST, PUT, DELETE, PATCH, etc... Cada tipo significa algo para o servidor.
+GET na URL = busca
+POST na URL = adição no servidor
+PUT na URL = atualizar
+DELETE... = remover 
+(explicando de forma bem simples, é bem mais complexo.)
+
+Para fazer a requisição e cumprir uma tarefa, precisamos em determinado momento passar os dados do que queremos
+inserir ao servidor. Existem algumas formas para passar esses dados, seja pelo próprio path (dominio/blabla/bla)
+ou por Query Strings, que é uma descrição de busca.
+
+Toda vez que fazemos um GET podemos passar alguns parâmetros para filtrar nossa busca, e como a gente faz para 
+filtrar isso através da Query String? 
+
+https://pokeapi.co/api/v2/pokemon? - é tudo que vem depois do ponto de interrogação, segue por chave e valor:
+
+https://pokeapi.co/api/v2/pokemon?type=grass - chave = type e grass = valor
+
+se quiser adicionar mais argumentos para filtrar, concatena com &:
+
+https://pokeapi.co/api/v2/pokemon?type=grass&name=i - busca dentro do servidor uma lista dos pokemon com tipo grass
+e nomes que começam com i. Muito bacana!
+
+Headers são uma espécie de "configuração" da nossa requisição, onde a gente passa dados que fazem sentido para configurar
+essa requisição.
+
+accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+
+Estou falando para o servidor através deste accept que aceito:
+text/html
+application/xhtml+xml
+xml;q=0.9
+mage/avif
+image/webp
+image/apng
+etc...
+
+Mas isso é só uma informação que estamos passando ao servidor. No Response Headers a gente verifica o que foi enviado para nós
+
+Request Headers: Configuração da API
+Response Headers: Configuração da API
+
+Pesquisar sobre princípios do REST API
+
+Resumindo, uma requisição é composta por:
+URL
+Request Method
+Request Headers
+Request Body
+
+
+E uma resposta é composta por:
+Status Code
+Response Headers
+Response Body
+
